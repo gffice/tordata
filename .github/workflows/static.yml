@@ -36,12 +36,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          url=$(cat url.txt)
-          mkdir aaa
-          cd aaa
-          mkdir html
-          sudo apt install httrack
-          httrack ${url}
+          wegt -i url.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
